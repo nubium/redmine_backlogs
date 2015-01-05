@@ -69,7 +69,7 @@ RB.Task = RB.Object.create(RB.Issue, {
     var cellID = j.parents('td').first().attr('id').split("_");
 
     var data = j.find('.editor').serialize() +
-               "&parent_issue_id=" + cellID[0] +
+				(this.isNew() ? ("&parent_issue_id=" + cellID[0]) : "" ) +
                "&status_id=" + cellID[1] +
                "&next=" + (nxt.length==1 ? nxt.data('this').getID() : '') +
                (this.isNew() ? "" : "&id=" + j.children('.id').text());
