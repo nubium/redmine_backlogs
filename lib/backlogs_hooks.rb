@@ -131,7 +131,7 @@ module BacklogsPlugin
           #developers = select_tag("time_entry[user_id]", options_from_collection_for_select(developers, :id, :name, User.current.id))
           #developers = developers.gsub(/\n/, '')
 
-          if issue.is_story?
+          #if issue.is_story?
             snippet += '<p>'
             #snippet += context[:form].label(:story_points)
             if Backlogs.setting[:story_points].blank?
@@ -166,7 +166,7 @@ module BacklogsPlugin
                 </script>
               generatedscript
             end
-          end
+          #end
 
           params = context[:controller].params
           if issue.is_story? && params[:copy_from]
