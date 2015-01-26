@@ -190,7 +190,7 @@ module Backlogs
       end
 
       def assignable_releases
-        project.shared_releases
+        project.open_releases_by_date
       end
 
       def release_id=(rid)
