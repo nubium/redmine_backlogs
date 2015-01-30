@@ -111,7 +111,7 @@ RB.Taskboard = RB.Object.create({
       // check for project
       //sharing, restrictive case: only allow same-project story-task relationship
       if (new_project_id != old_project_id && old_story_id != new_story_id) {
-        RB.$(this).sortable('disable');
+//        RB.$(this).sortable('disable');
         return;
       }
 
